@@ -4,30 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Messe Dausin - Messe</title>
+    <title>Messe Dausin</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<!-- <body onLoad="caricaMesse()"> -->
-<body onLoad="pageSetup()">
-    <div class="row justify-content-center">
-      <div class="col-sm-6 d-flex align-items-center altezza">
-          <h3 class="site_label">Dal giorno </h3>
-          <input type="date" name="dataFrom" id="dataFromPicker" onchange="onDataFromChange()">
-      </div>
-      <div class="col-sm-6 d-flex align-items-center altezza">
-        <h3 class="site_label">Al giorno </h3>
-          <input type="date" name="dataTo" id="dataToPicker">
-      </div>
-      <div class="col-sm-6 d-flex align-items-center altezza justify-content-center">
-        <input class="site_button" type="button" value="CERCA" onClick="cercaMesse()">
-      </div>
-    </div>
-    
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand" href="#">MesseDausin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./chiese.html">Chiese</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./messe.html">Messe</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li> -->
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="page_title h1">Messe Dausin</div>
+        <div class="row">
+          <div class="content_text p">Motore di Ricerca per le Sante Messe prefestive e festive in alcune zone delle Diocesi della Provincia di Cuneo.</div>
+        </div>
 
-    <div id="divMesse"></div>
-    <script type="text/javascript" src="js/elenco_messe.js"></script>
-    <script type="text/javascript" src="js/messe_script.js"></script>
+        <div class="page_title h2">Copertura</div>
+        <div class="row">
+          <ul class="list-group">Attualmente sono coperte alcune parrocchie delle seguenti diocesi:
+            <li class="list-group-item"><a href="https://www.diocesisaluzzo.it/" target="_blank">Diocesi di Saluzzo</a></li>
+            <li class="list-group-item">Diocesi di Cuneo e Fossano (in lavorazione)</li>
+          </ul>
+        </div>
+        <div class="page_title h2">La Ricerca</div>
+        <div class="row">
+          <ul class="list-group">Ricerca tramite:
+            <li class="list-group-item">data e ora (attualmente: solo data)</li>
+            <li class="list-group-item">geolocalizzazione (non attiva)</li>
+          </ul>
+        </div>
+
+        <div class="page_title h2">Fare Attenzione</div>
+        <div class="row">
+          <div class="content_text">Attenzione: alcune chiese hanno un orario fisso per la Santa Messa, quindi - tolto rarissimi casi - l'orario sarà sempre quello. In altre chiese,
+            l'orario non ha cadenza settimanale ma può avere frequenza diversa (es: 1^ e 3^ domenica del mese). Tali chiese (e relative Sante Messe) riportano tale annotazione e sono strettamente
+            legate all'aggiornamento che arriva dalla relativa parrocchia.
+          </div>
+        </div>
+        <div class="page_title h2">Aiutiamoci</div>
+        <div class="row">
+          <div class="content_text">
+            Vuoi collaborare o mantenere aggiornati gli orari della tua parrocchia, vicaria o fraternità pastorale? Scrivici a <a href="mailto:messedausin@gmail.com">messedausin@gmail.com</a>.
+            Questo motore di ricerca ha senso e funziona se gli orari sono veri. Se ognuno fa nel suo piccolo, il servizio può funzionare davvero.
+          </div>
+        </div>
+      </div>
+      <!-- container  -->
 </body>
 </html>

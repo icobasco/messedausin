@@ -2,14 +2,33 @@ body {
     padding: 2%;
 }
 
+
+
+/* CHIESE */
 .chiesa {
     padding: 2%;
     margin: 1%;
     border-radius: 25px;
     border: 1px solid black;
-    /* background-color: #1852da;
-    color: #f3f5f7; */
+    background-color: #1852da;
+    color: #f4c007;
+    display:flex;
 }
+
+.chiesa_name {
+    border: 1px solid black;    
+    height: 100%;
+}
+
+.chiesa_map_icon {
+    margin-left: 5%;
+    height: 50px;
+    border: 1px solid black;
+}
+
+
+
+/* MESSE */
 .messa {
     padding: 2%;
     margin: 1%;
