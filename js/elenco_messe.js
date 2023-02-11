@@ -1,4 +1,4 @@
-[
+let messe = [
         { "chiesa_nome": "Mad. delle Grazie", "data": "04/02/2023", "prefes": "PRE", "ora": "15:00", "note": "" },
         { "diocesi_id": "001", "chiesa_id": "0011", "paese": "Piasco", "chiesa_nome": "S. Giovanni", "data": "04/02/2023", "prefes": "PRE", "ora": "17:00", "note": "Il 1° e 3° Sabato del mese" },
         { "chiesa_nome": "Maria V. Assunta", "data": "04/02/2023", "prefes": "PRE", "ora": "18:00", "note": "" },
