@@ -1,5 +1,4 @@
-
-    let messe = [
+[
         { "chiesa": "Mad. delle Grazie", "paese": "Rossana", "data": "04/02/2023", "prefes": "PRE", "ora": "15:00", "note": "" },
         { "chiesa": "S. Giovanni", "paese": "Piasco", "data": "04/02/2023", "prefes": "PRE", "ora": "17:00", "note": "Il 1° e 3° Sabato del mese" },
         { "chiesa": "Maria V. Assunta", "paese": "Rossana", "data": "04/02/2023", "prefes": "PRE", "ora": "18:00", "note": "" },
