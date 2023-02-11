@@ -1,5 +1,5 @@
 let chiese = [
-    {"diocesi_id": "001", "chiesa_id": "0001", "paese": "Bellino", "frazione": "Chiesa", "intitolazione": "S. Giacomo", "posizione": { "indirizzo":"Fr. Chiesa", "CAP": "12030", "lat": 44.583231, "lon": 7.033545}},
+    {"diocesi_id": "001", "chiesa_id": "0001", "paese": "Bellino", "frazione": "Chiesa", "intitolazione": "S. Giacomo", "posizione": { "indirizzo":"Fr. Chiesa", "CAP": "12030", "lat": 44.5831943, "lon": 7.0335799}},
     {"diocesi_id": "001", "chiesa_id": "0002", "paese": "Bellino", "frazione": "Celle", "intitolazione": "S. Spirito", "posizione": { "indirizzo":"Fr. Celle", "CAP": "12030", "lat": 0, "lon": 0}},
     {"diocesi_id": "001", "chiesa_id": "0003", "paese": "Brossasco", "frazione": "Capoluogo", "intitolazione": "S. Andrea", "posizione": { "indirizzo":"P.zza Parrocchia", "CAP": "12030", "lat": 44.571024, "lon": 7.361109}},
     {"diocesi_id": "001", "chiesa_id": "0004", "paese": "Casteldelfino", "frazione": "Capoluogo", "intitolazione": "S. Margherita", "posizione": { "indirizzo":"Via Roma, 51", "CAP": "12020", "lat": 0, "lon": 0}},

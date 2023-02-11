@@ -26,7 +26,9 @@ const caricaChiese =()=> {
         }
         if (chiesa.posizione.lat != 0 && chiesa.posizione.lon != 0){
             divMappa = document.createElement("div");
-            divMappa.innerHTML = " <a class=\"chiesa_map_icon\" target=\"_blank\" href=\"https://www.google.com/maps/@" + chiesa.posizione.lat + "," + chiesa.posizione.lon + ",19z\">" + mapIconHTML + "</a>";
+            // divMappa.innerHTML = " <a class=\"chiesa_map_icon\" target=\"_blank\" href=\"https://www.google.com/maps/@" + chiesa.posizione.lat + "," + chiesa.posizione.lon + ",19z\">" + mapIconHTML + "</a>";
+            divMappa.innerHTML = " <a class=\"chiesa_map_icon\" target=\"_blank\" href=\"https://www.google.com/maps/search/?api=1&query=" + chiesa.posizione.lat + "," + chiesa.posizione.lon + "\">" + mapIconHTML + "</a>";
+            // https://www.google.com/maps/search/?api=1&query=36.26577,-92.54324
             // console.log("\t\t Trovato posizione!");
         }
         // TODO: Indirizzo da inserire
