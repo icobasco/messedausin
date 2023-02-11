@@ -1,3 +1,13 @@
+/*
+    TODO:
+        - Tasto MAPPA per vedere su Maps la Chiesa
+        - Filtro (check o testo)
+        - Messe Piasco marzo
+        - Messe Verzuolo (standard)
+        - Mercoledì ceneri
+*/
+
+
 /**
  * Setup:
  *  - dataFrom settato ad oggi
@@ -93,13 +103,13 @@ const cercaMesse =()=> {
             divMessa.innerHTML = 
                 "<div class=\"messa_riga\">"
                 + "<div class=\"messa_orario\"><h4>h " + messa.ora + "</h4></div>"
-                + "<div class=\"messa_chiesa\"><h5><b>" + messa.paese + " - " + messa.chiesa + "</b></h5>"
+                + "<div class=\"messa_chiesa\"><h5><b>" + messa.paese + " - " + messa.chiesa_nome + "</b></h5>"
                 + note + "</div></div>";
 
             // divMessa.innerHTML = "<div class=\"messa_chiesa\"><h2><b>" + messa.paese + " - " + messa.chiesa + "</b></h2></div>"
             //     + "<div>" + giornoMessa + " " + messa.data + " alle h" + messa.ora + "</div>";
 
-            console.log("Messa: " + messa.paese + " - " + messa.chiesa + " di " +  giornoMessa + " " + messa.data + " @" + messa.ora);
+            console.log("Messa: " + messa.paese + " - " + messa.chiesa_nome + " di " +  giornoMessa + " " + messa.data + " @" + messa.ora);
             divMesse.appendChild(divMessa);
         }
     }
