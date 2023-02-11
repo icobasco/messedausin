@@ -59,11 +59,9 @@ body {
     padding: 2%;
     margin: 1%, 0%, 1%, 0%;
     border-radius: 25px 0px 0px 25px;
-    /* border: 1px solid black; */
     width: 25%;
     align-items: center;
     color: #f4c007;
-    /* background-color: #1852da; */
     justify-content: center;
 }
 .altezza{
@@ -80,6 +78,10 @@ body {
     align-items: center;
     /* color: #1852da; */
     background-color: #f4c007;
+}
+.my_button {
+    border-radius: 5px;
+    padding: 2% 5% 2% 5%;
 }
 
 .site_label {
