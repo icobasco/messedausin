@@ -85,14 +85,14 @@ const cercaMesse =()=> {
         const messaTimestamp = new Date(dataMessa);
         if ( (messaTimestamp >= fromDate) && (messaTimestamp <= toDate) ){
             divMessa = document.createElement("div");
-            // divMessa.className = "messa";    
             messeOKCounter++;   
         }
         if (divMessa != "NO_MESSA") {
             if (lastGiornoMessa != giornoMessa) {
                 // cambio giorno
                 const divGiorno = document.createElement("div");
-                divGiorno.innerHTML = "<h3>" + giornoMessa + " " + messa.data + "</h3>";
+                divGiorno.className = "h2";
+                divGiorno.innerHTML = giornoMessa + " " + messa.data;
                 divMesse.appendChild(divGiorno);
                 lastGiornoMessa = giornoMessa;
             }
@@ -102,9 +102,8 @@ const cercaMesse =()=> {
             
             divMessa.innerHTML = 
                 "<div class=\"messa_riga\">"
-                + "<div class=\"messa_orario\"><h4>h " + messa.ora + "</h4></div>"
-                + "<div class=\"messa_chiesa\"><h5><b>" + messa.paese + " - " + messa.chiesa_nome + "</b></h5>"
-                + note + "</div></div>";
+                + "<div class=\"messa_orario bg-dark h4\">h " + messa.ora + "</div>"
+                + "<div class=\"messa_chiesa text-dark h5\">" + messa.paese + " - " + messa.chiesa_nome + note + "</div></div>";
 
             // divMessa.innerHTML = "<div class=\"messa_chiesa\"><h2><b>" + messa.paese + " - " + messa.chiesa + "</b></h2></div>"
             //     + "<div>" + giornoMessa + " " + messa.data + " alle h" + messa.ora + "</div>";
