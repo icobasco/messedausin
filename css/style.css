@@ -71,6 +71,7 @@ body {
 .messa_orario {
     display: flex;
     padding: 2%;
+    padding-left: 5%;
     margin: 1%, 0%, 1%, 0%;
     border-radius: 25px 0px 0px 25px;
     width: 25%;
