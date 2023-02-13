@@ -7,50 +7,66 @@
     <title>Messe Dausin - Messe</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
+    
 </head>
-<body onLoad="pageSetup()">
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand text-warning" href="./index.html">MesseDausin</a>
+<body class="bg-dark text-warning" onLoad="pageSetup()">
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning text-dark fixed-top">
+    <!-- <a class="navbar-brand text-warning h3" href="./index.html">MesseDausin</a> -->
         <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link text-warning" href="./index.html">Home</a>
+              <a class="nav-link h3" href="./index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-warning" href="./chiese.html">Chiese</span></a>
+              <a class="nav-link h3" href="./chiese.html">Chiese</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link text-warning" href="./messe.html">Messe <span class="sr-only">(current)</span></a>
+                <a class="nav-link h3" href="./messe.html">Messe <span class="sr-only">(current)</span></a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li> -->
           </ul>
         </div>
     </nav>
-    <div class="row justify-content-center">
-      <div class="col-sm-6 d-flex align-items-center altezza">
-          <h3 class="site_label">Dal giorno </h3>
-          <input type="date" name="dataFrom" id="dataFromPicker" onchange="onDataFromChange()">
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-sm-6 d-flex align-items-center altezza">
+            <h3 class="site_label pr-2">Dal giorno </h3>
+            <input class="bg-warning text-dark" type="date" name="dataFrom" id="dataFromPicker" onchange="onDataFromChange()">
+        </div>
+        <div class="col-sm-6 d-flex align-items-center altezza">
+          <h3 class="site_label pr-2">Al giorno </h3>
+            <input class="bg-warning text-dark" type="date" name="dataTo" id="dataToPicker">
+        </div>
       </div>
-      <div class="col-sm-6 d-flex align-items-center altezza">
-        <h3 class="site_label">Al giorno </h3>
-          <input type="date" name="dataTo" id="dataToPicker">
+      <div class="row justify-content-center">
+        <div class="col-sm-6 d-flex align-items-center altezza justify-content-center border ">
+          <div class="form-group my_button">
+            <!-- <label for="sel1">Scegli il luogo</label> -->
+            <select class="form-control bg-dark text-warning h3 my_button" id="selectLuogo" onChange="cambiaLuogo()">
+              <option value="" selected disabled>Luogo</option>
+              <option value="Piasco">Piasco</option>
+              <option value="Rossana">Rossana</option>
+              <!-- <option value="Saluzzo">Saluzzo</option> -->
+              <!-- <option value="Brossasco">Brossasco</option>             -->
+              <option value="Costigliole Saluzzo">Costigliole Saluzzo</option>
+              <option value="Verzuolo">Verzuolo</option>     
+            </select>
+          </div>
+        </div>
+        <div class="col-sm-6 d-flex align-items-center altezza justify-content-center border">
+          <input class="bg-dark text-warning h3 my_button" type="button" value="CERCA" onClick="cercaMesse()">
+        </div>
       </div>
-      <div class="col-sm-6 d-flex align-items-center altezza justify-content-center">
-        <input class="bg-dark text-warning h3 my_button" type="button" value="CERCA" onClick="cercaMesse()">
-      </div>
-    </div>
+      <div id="divMesse"></div>
+    </div> <!-- container -->
     
 
-    <div id="divMesse"></div>
     <script type="text/javascript" src="./js/elenco_messe.js"></script>
     <script type="text/javascript" src="./js/messe_script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

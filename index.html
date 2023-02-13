@@ -8,66 +8,68 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand text-warning h3" href="./index.html">MesseDausin</a>
-        <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link text-warning" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="./chiese.html">Chiese</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="./messe.html">Messe</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li> -->
-          </ul>
-        </div>
-      </nav>
-      <div class="container">
-        <div class="page_title h1">Messe Dausin</div>
-        <div class="row">
-          <div class="content_text p">Motore di Ricerca per le Sante Messe prefestive e festive in alcune zone delle Diocesi della Provincia di Cuneo.</div>
-        </div>
-
-        <div class="page_title h2">Copertura</div>
-        <div class="row">
-          <ul class="list-group">Attualmente sono coperte alcune parrocchie delle seguenti diocesi:
-            <li class="list-group-item"><a href="https://www.diocesisaluzzo.it/" target="_blank">Diocesi di Saluzzo</a></li>
-            <li class="list-group-item">Diocesi di Cuneo e Fossano (in lavorazione)</li>
-          </ul>
-        </div>
-        <div class="page_title h2">La Ricerca</div>
-        <div class="row">
-          <ul class="list-group">Ricerca tramite:
-            <li class="list-group-item">data e ora (attualmente: solo data)</li>
-            <li class="list-group-item">geolocalizzazione (non attiva)</li>
-          </ul>
-        </div>
-
-        <div class="page_title h2">Fare Attenzione</div>
-        <div class="row">
-          <div class="content_text">Attenzione: alcune chiese hanno un orario fisso per la Santa Messa, quindi - tolto rarissimi casi - l'orario sarà sempre quello. In altre chiese,
-            l'orario non ha cadenza settimanale ma può avere frequenza diversa (es: 1^ e 3^ domenica del mese). Tali chiese (e relative Sante Messe) riportano tale annotazione e sono strettamente
-            legate all'aggiornamento che arriva dalla relativa parrocchia.
-          </div>
-        </div>
-        <div class="page_title h2">Aiutiamoci</div>
-        <div class="row">
-          <div class="content_text">
-            Vuoi collaborare o mantenere aggiornati gli orari della tua parrocchia, vicaria o fraternità pastorale? Scrivici a <a href="mailto:messedausin@gmail.com">messedausin@gmail.com</a>.
-            Questo motore di ricerca ha senso e funziona se gli orari sono veri. Se ognuno fa nel suo piccolo, il servizio può funzionare davvero.
-          </div>
-        </div>
+<body class="bg-dark text-warning" onLoad="test()">
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning text-dark fixed-top">
+    <!-- <a class="navbar-brand text-warning h3" href="./index.html">MesseDausin</a> -->
+    <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link h3" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link h3" href="./chiese.html">Chiese</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link h3" href="./messe.html">Messe</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="jumbotron bg-dark text-warning">
+      <h1 class="display-4">Messe Dausin</h1>
+      <p class="lead">La Messa che cerchi, vicino a te</p>
+      <hr class="my-4">
+      <p>Motore di Ricerca per le Sante Messe prefestive e festive in alcune zone delle Diocesi della Provincia di Cuneo.</p>
+      <a class="btn bg-warning text-dark h3 my_button" href="./messe.html" role="button">Cerca la Messa</a>
+    </div>
+    <div class="page_title h2">Copertura</div>
+    <div class="row">
+      <ul class="bg-dark text-warning">Attualmente sono coperte alcune parrocchie delle seguenti diocesi:
+        <!-- <li class="list-group-item"><a href="https://www.diocesisaluzzo.it/" target="_blank">Diocesi di Saluzzo</a></li> -->
+        <li class="bg-dark text-warning">Diocesi di Saluzzo</li>
+        <li class="bg-dark text-warning">Diocesi di Cuneo e Fossano (in lavorazione)</li>
+      </ul>
+    </div>
+    <div class="page_title h2">La Ricerca</div>
+    <div class="row">
+      <ul class="bg-dark text-warning">Ricerca tramite:
+        <li class="bg-dark text-warning">data e ora (attualmente: solo data)</li>
+        <li class="bg-dark text-warning">geolocalizzazione (non attiva)</li>
+      </ul>
+    </div>
+    <div class="page_title h2">Fare Attenzione</div>
+    <div class="row">
+      <div class="content_text">Attenzione: alcune chiese hanno un orario fisso per la Santa Messa, quindi - tolto rarissimi casi - l'orario sarà sempre quello. In altre chiese,
+        l'orario non ha cadenza settimanale ma può avere frequenza diversa (es: 1^ e 3^ domenica del mese). Tali chiese (e relative Sante Messe) riportano tale annotazione e sono strettamente
+        legate all'aggiornamento che arriva dalla relativa parrocchia.
       </div>
-      <!-- container  -->
+    </div>
+    <div class="page_title h2">Aiutiamoci</div>
+    <div class="row">
+      <div class="content_text">
+        Vuoi collaborare o mantenere aggiornati gli orari della tua parrocchia, vicaria o fraternità pastorale? Scrivici a <a href="mailto:messedausin@gmail.com">messedausin@gmail.com</a>.
+        Questo motore di ricerca ha senso e funziona se gli orari sono veri. Se ognuno fa nel suo piccolo, il servizio può funzionare davvero.
+      </div>
+    </div>
+  </div>
+  <!-- container  -->
  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
