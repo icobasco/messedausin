@@ -45,6 +45,17 @@ const cercaMesse =()=> {
     const dataTo = document.querySelector("#dataToPicker").value;
     console.log("Cerco le Messe DOPO di " + dataFrom + " e PRIMA di " + dataTo);
     let divMesse = document.querySelector("#divMesse");
+    let indirizzoIcon = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"30\" fill=\"currentColor\" " + 
+                        "class=\"bi bi-geo-alt-fill pr-2\" viewBox=\"0 0 16 16\">" + 
+                        "<path d=\"M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z\"/></svg>";   
+    
+    let noteIcon = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"30\" fill=\"currentColor\" " + 
+                        "class=\"bi bi-info-square pr-2\" viewBox=\"0 0 16 16\">" + 
+                        "<path d=\"M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z\"/>" +
+                        "<path d=\"m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z\"/>" +
+                        "</svg>";
+                        
+    // Pulisci i precedenti risultati a video
     while (divMesse.hasChildNodes()) {
         divMesse.removeChild(divMesse.children[0]);
     }
@@ -54,28 +65,12 @@ const cercaMesse =()=> {
     console.log("toDate [" +    toDate.toLocaleString('default', {year: 'numeric', month: '2-digit', day: '2-digit'}) + "]");         
     let messeOKCounter = 0;
     let lastDataMessa = "";
-/*
-    console.log("========================================");
-    for (let idMessa=0; idMessa<messe.length; idMessa++){
-        let messa = messe[idMessa];
-        const messaValue = messa.data.substring(6, 10) + messa.data.substring(3, 5) + messa.data.substring(0, 2) + messa.ora.replace(":", "");
-        console.log(idMessa + "[" + messaValue + "]");
-    }
-*/
     console.log("========================================");
     messe = messe.sort((a, b) => {
         const messaA = a.data.substring(6, 10) + a.data.substring(3, 5) + a.data.substring(0, 2) + a.ora.replace(":", "");
         const messaB = b.data.substring(6, 10) + b.data.substring(3, 5) + b.data.substring(0, 2)+ b.ora.replace(":", "");
         return messaA - messaB;
       });
-/*
-    console.log("========================================");
-    for (let idMessa=0; idMessa<messe.length; idMessa++){
-        let messa = messe[idMessa];
-        const messaValue = messa.data.substring(6, 10) + messa.data.substring(3, 5) + messa.data.substring(0, 2) + messa.ora.replace(":", "");
-        console.log(idMessa + "[" + messaValue + "]");
-    }
-*/
     for (let idMessa=0; idMessa<messe.length; idMessa++){
         let messa = messe[idMessa];
         let divMessa = "NO_MESSA";
@@ -103,21 +98,22 @@ const cercaMesse =()=> {
             }
             let  note = "";
             if (messa.note != "")
-                note = "<p>[" + messa.note + "]</p>";
+                note = "<div class=\"messa_chiesa_note\">" + noteIcon + messa.note + "</div>";
                 
             let  frazione = "";
-            if (messa.frazione != "Capoluogo")
-                frazione = " (fr. " + messa.frazione + ")";
+            if (messa.frazione != "Capoluogo") {
+                frazione = "<div class=\"messa_chiesa_frazione\">" + indirizzoIcon + messa.frazione + "</div>"
+            }
             
             divMessa.innerHTML = 
                 "<div class=\"messa_riga\">"
-                + "<div class=\"messa_orario bg-warning h4\">h " + messa.ora + "</div>"
-                + "<div class=\"messa_chiesa h5\">" + messa.paese + " - " + messa.chiesa_nome + frazione + note + "</div></div>";
-
-            // divMessa.innerHTML = "<div class=\"messa_chiesa\"><h2><b>" + messa.paese + " - " + messa.chiesa + "</b></h2></div>"
-            //     + "<div>" + giornoMessa + " " + messa.data + " alle h" + messa.ora + "</div>";
-
-            // console.log("Messa: [" + messa.diocesi_id + messa.chiesa_id + "]" + messa.paese + frazione + " - " + messa.chiesa_nome + " di " +  giornoMessa + " " + messa.data + " @" + messa.ora);
+                + "<div class=\"messa_orario bg-warning h4\">" + messa.ora + "</div>"
+                +   "<div class=\"messa_chiesa_dati\">"
+                +       "<div class=\"messa_chiesa_nome h4\">" + messa.paese + " - " + messa.chiesa_nome + "</div>"
+                +       frazione
+                +       note
+                +   "</div>"
+                + "</div>";
             divMesse.appendChild(divMessa);
         }
     }
