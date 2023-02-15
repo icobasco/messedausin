@@ -44,12 +44,37 @@ const cercaMesse =()=> {
     const dataFrom = document.querySelector("#dataFromPicker").value;
     const dataTo = document.querySelector("#dataToPicker").value;
     console.log("Cerco le Messe DOPO di " + dataFrom + " e PRIMA di " + dataTo);
+
+    // Crea array associativo delle Chiese (per dati Chiesa)
+    let chieseDati = new Array();
+    for (let idChiesa=0; idChiesa<chiese.length; idChiesa++){
+        let chiesa = chiese[idChiesa];
+        let chiesaCOD = chiesa.diocesi_id + chiesa.chiesa_id;
+        // 
+        const chiesaDati = {
+            paese: chiesa.paese,
+            frazione: chiesa.frazione,
+            intitolazione: chiesa.intitolazione,
+            posizione: {
+                indirizzo: chiesa.posizione.indirizzo,
+                cap: chiesa.posizione.cap,
+                lat: chiesa.posizione.lat,
+                lon: chiesa.posizione.lon
+            }
+        };
+        chieseDati[chiesaCOD] = chiesaDati;
+    }
+
+
     let divMesse = document.querySelector("#divMesse");
-    let indirizzoIcon = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"30\" fill=\"currentColor\" " + 
+    let indirizzoOKIcon = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" fill=\"#f4c007\" " + 
                         "class=\"bi bi-geo-alt-fill pr-2\" viewBox=\"0 0 16 16\">" + 
-                        "<path d=\"M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z\"/></svg>";   
+                        "<path d=\"M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z\"/></svg>";  
+    let indirizzoKOIcon = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" fill=\"#7c8895\" " + 
+                        "class=\"bi bi-geo-alt-fill pr-2\" viewBox=\"0 0 16 16\">" + 
+                        "<path d=\"M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z\"/></svg>";  
     
-    let noteIcon = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"30\" fill=\"currentColor\" " + 
+    let noteIcon = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" fill=\"#f4c007\" " + 
                         "class=\"bi bi-info-square pr-2\" viewBox=\"0 0 16 16\">" + 
                         "<path d=\"M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z\"/>" +
                         "<path d=\"m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z\"/>" +
@@ -76,17 +101,27 @@ const cercaMesse =()=> {
         let divMessa = "NO_MESSA";
         const dataMessa = messa.data.substring(6, 10) + "-" + messa.data.substring(3, 5) + "-" + messa.data.substring(0, 2);
         const giornoMessa = new Date(dataMessa).toLocaleString('default', {weekday: 'long'});
-        const messaTimestamp = new Date(dataMessa);
-        console.log("Luogo: " + selectLuogo.value);
+        const messaTimestamp = new Date(dataMessa);        
+        // console.log("Luogo: " + selectLuogo.value);
+        let posIndirizzo = "";
+        let posLat = "";
+        let posLon = "";
         if (messa.paese == selectLuogo.value) {
             if ( (messaTimestamp >= fromDate) && (messaTimestamp <= toDate) ){
+                let chiesaCOD = messa.diocesi_id + messa.chiesa_id;
+                console.log("Trovato una Messa OK: " + messa.paese + " - " + messa.chiesa_nome + " " + giornoMessa + " " + messa.data + " [" + chiesaCOD + "]");
+                let chiesaDati = chieseDati[chiesaCOD];
+                posIndirizzo = chiesaDati.posizione.indirizzo;
+                posLat = chiesaDati.posizione.lat;
+                posLon = chiesaDati.posizione.lon;
+                console.log("\t" + chiesaDati.intitolazione + " IN " + chiesaDati.paese + " (" + posIndirizzo + ")\t" + posLat + "," + posLon);
                 divMessa = document.createElement("div");
                 messeOKCounter++;   
             }
         }
-        else {
-            console.log("Filtro: \"" + selectLuogo.value + "\" - Chiesa: \"" + messa.paese + "\"");
-        }
+        // else {
+        //     console.log("Filtro: \"" + selectLuogo.value + "\" - Chiesa: \"" + messa.paese + "\"");
+        // }
         if (divMessa != "NO_MESSA") {
             if (lastDataMessa != dataMessa) {
                 // cambio giorno
@@ -96,21 +131,33 @@ const cercaMesse =()=> {
                 divMesse.appendChild(divGiorno);
                 lastDataMessa = dataMessa;
             }
+            
+            let linkMapsHTML = "";
+            if ( (posLat != 0) && (posLon != 0) ){
+                linkMapsHTML = " <a target=\"_blank\" href=\"https://www.google.com/maps/search/?api=1&query=" + posLat + "," + posLon + "\">";
+                indirizzoIcon = indirizzoOKIcon;
+            }
+            else {
+                indirizzoIcon.replace("COLORE_ICONA", "7c8895");
+                indirizzoIcon = indirizzoKOIcon;
+            }
+                
+            let divIndirizzoHTML = "<div class=\"messa_chiesa_indirizzo\">" + linkMapsHTML + indirizzoIcon + "</a>";
+            if (messa.frazione != "Capoluogo") {
+                divIndirizzoHTML += "(fr. " + messa.frazione + ") ";
+            }
+            divIndirizzoHTML += posIndirizzo + "</div>";
+
             let  note = "";
             if (messa.note != "")
                 note = "<div class=\"messa_chiesa_note\">" + noteIcon + messa.note + "</div>";
-                
-            let  frazione = "";
-            if (messa.frazione != "Capoluogo") {
-                frazione = "<div class=\"messa_chiesa_frazione\">" + indirizzoIcon + messa.frazione + "</div>"
-            }
             
             divMessa.innerHTML = 
                 "<div class=\"messa_riga\">"
                 + "<div class=\"messa_orario bg-warning h4\">" + messa.ora + "</div>"
                 +   "<div class=\"messa_chiesa_dati\">"
                 +       "<div class=\"messa_chiesa_nome h4\">" + messa.paese + " - " + messa.chiesa_nome + "</div>"
-                +       frazione
+                +       divIndirizzoHTML
                 +       note
                 +   "</div>"
                 + "</div>";
