@@ -2,6 +2,14 @@ body {
     padding: 2%;
 }
 
+.container {
+    margin-top: 5%;
+}
+
+.hr_yellow {
+    color: #f4c007;
+}
+
 .my_nav_item_link {
     font-weight: bold;
     color: #f4c007;
@@ -97,9 +105,14 @@ body {
 }
 .messa_chiesa_indirizzo {
     padding-left: 2%;
+    display: flex;
+    align-items: center;
 }
 .messa_chiesa_note {
     padding-left: 2%;
+    display: flex;
+    align-items: center;
+
 }
 .my_button {
     border-radius: 5px;

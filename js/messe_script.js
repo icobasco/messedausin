@@ -111,6 +111,7 @@ const cercaMesse =()=> {
                 let chiesaCOD = messa.diocesi_id + messa.chiesa_id;
                 console.log("Trovato una Messa OK: " + messa.paese + " - " + messa.chiesa_nome + " " + giornoMessa + " " + messa.data + " [" + chiesaCOD + "]");
                 let chiesaDati = chieseDati[chiesaCOD];
+                frazione = chiesaDati.frazione;
                 posIndirizzo = chiesaDati.posizione.indirizzo;
                 posLat = chiesaDati.posizione.lat;
                 posLon = chiesaDati.posizione.lon;
@@ -133,6 +134,7 @@ const cercaMesse =()=> {
             }
             
             let linkMapsHTML = "";
+            let indirizzoIcon = "";
             if ( (posLat != 0) && (posLon != 0) ){
                 linkMapsHTML = " <a target=\"_blank\" href=\"https://www.google.com/maps/search/?api=1&query=" + posLat + "," + posLon + "\">";
                 indirizzoIcon = indirizzoOKIcon;
@@ -143,8 +145,8 @@ const cercaMesse =()=> {
             }
                 
             let divIndirizzoHTML = "<div class=\"messa_chiesa_indirizzo\">" + linkMapsHTML + indirizzoIcon + "</a>";
-            if (messa.frazione != "Capoluogo") {
-                divIndirizzoHTML += "(fr. " + messa.frazione + ") ";
+            if (frazione != "Capoluogo") {
+                divIndirizzoHTML += "(fr. " + frazione + ") ";
             }
             divIndirizzoHTML += posIndirizzo + "</div>";
 
