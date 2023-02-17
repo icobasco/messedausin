@@ -1,0 +1,7 @@
+let chiese_002 = [
+    {"diocesi_id": "002", "chiesa_id": "0001", "paese": "Caraglio", "frazione": "Capoluogo", "intitolazione": "Maria Vergine Assunta", "posizione": { "indirizzo":"P.zza G. Giolitti, 9", "CAP": "12023", "lat": 44.4180431, "lon": 7.4276702}},	
+    {"diocesi_id": "002", "chiesa_id": "0002", "paese": "Caraglio", "frazione": "Paschera S. Carlo", "intitolazione": "S. Carlo", "posizione": { "indirizzo":"Fraz. Paschera S. Carlo", "CAP": "12023", "lat": 44.4395448, "lon": 7.4172059}},	
+    {"diocesi_id": "002", "chiesa_id": "0003", "paese": "Caraglio", "frazione": "Paschera S. Defendente", "intitolazione": "S. Defendente", "posizione": { "indirizzo":"Fraz. Paschera S. Defendente", "CAP": "12023", "lat": 44.4395448, "lon": 7.4172059}},	
+    {"diocesi_id": "002", "chiesa_id": "0004", "paese": "Caraglio", "frazione": "S. Lorenzo", "intitolazione": "S. Lorenzo", "posizione": { "indirizzo":"Via S. Lorenzo", "CAP": "12023", "lat": 44.4310893, "lon": 7.4493039}},
+    {"diocesi_id": "002", "chiesa_id": "0005", "paese": "Caraglio", "frazione": "Palazzasso", "intitolazione": "S. Anna", "posizione": { "indirizzo":"Fraz. Palazzasso", "CAP": "12023", "lat": 44.4573591, "lon": 7.4580834}}
+]

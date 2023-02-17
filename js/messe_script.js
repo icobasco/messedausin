@@ -6,6 +6,12 @@
 */
 
 
+let diocesi = "";
+let paese = "";
+let chieseDiocesi = "";
+let messe = "";
+
+
 /**
  * Setup:
  *  - dataFrom settato ad oggi
@@ -47,8 +53,9 @@ const cercaMesse =()=> {
 
     // Crea array associativo delle Chiese (per dati Chiesa)
     let chieseDati = new Array();
-    for (let idChiesa=0; idChiesa<chiese.length; idChiesa++){
-        let chiesa = chiese[idChiesa];
+    console.log("Creo array associativo per le chiese di " + diocesi + ": INIZIO");
+    for (let idChiesa=0; idChiesa<chieseDiocesi.length; idChiesa++){
+        let chiesa = chieseDiocesi[idChiesa];
         let chiesaCOD = chiesa.diocesi_id + chiesa.chiesa_id;
         // 
         const chiesaDati = {
@@ -62,8 +69,10 @@ const cercaMesse =()=> {
                 lon: chiesa.posizione.lon
             }
         };
+        // console.log(idChiesa + ")" + chiesaDati.paese + " - " + chiesaDati.intitolazione);
         chieseDati[chiesaCOD] = chiesaDati;
     }
+    console.log("Creo array associativo per Chiese: FINE");
 
 
     let divMesse = document.querySelector("#divMesse");
@@ -88,6 +97,8 @@ const cercaMesse =()=> {
     const toDate = new Date(dataTo);
     console.log("fromDate [" +  fromDate.toLocaleString('default', {year: 'numeric', month: '2-digit', day: '2-digit'}) + "]");    
     console.log("toDate [" +    toDate.toLocaleString('default', {year: 'numeric', month: '2-digit', day: '2-digit'}) + "]");         
+    console.log("Diocesi: " + diocesi);
+    console.log("Paese: " + paese);
     let messeOKCounter = 0;
     let lastDataMessa = "";
     console.log("========================================");
@@ -106,11 +117,12 @@ const cercaMesse =()=> {
         let posIndirizzo = "";
         let posLat = "";
         let posLon = "";
-        if (messa.paese == selectLuogo.value) {
+        if (messa.paese == paese) {
             if ( (messaTimestamp >= fromDate) && (messaTimestamp <= toDate) ){
                 let chiesaCOD = messa.diocesi_id + messa.chiesa_id;
                 console.log("Trovato una Messa OK: " + messa.paese + " - " + messa.chiesa_nome + " " + giornoMessa + " " + messa.data + " [" + chiesaCOD + "]");
                 let chiesaDati = chieseDati[chiesaCOD];
+                console.log("\tchiesaDati: " + chiesaDati);
                 frazione = chiesaDati.frazione;
                 posIndirizzo = chiesaDati.posizione.indirizzo;
                 posLat = chiesaDati.posizione.lat;
@@ -182,16 +194,62 @@ const onDataFromChange=()=> {
     // dataToPicker.value = dataFromPicker.value;
 }
 
-// https://www.google.com/maps/@44.5688508,7.4576425,19z
+const onDiocesiChange=()=> {
+    const selDiocesi = document.querySelector("#selDiocesi");
+    diocesi = selDiocesi.value;
+    console.log("onDiocesiChange(): " + diocesi);
+    caricaChieseDiocesi();
+}
 
-
-            // console.log("Messa da visualizzare! [" + messaTimestamp.toLocaleString('default', {year: 'numeric', month: '2-digit', day: '2-digit', hour:'2-digit', minute: '2-digit', second: '2-digit'}) + "] [now is " 
-            // + now.toLocaleString('default', {year: 'numeric', month: '2-digit', day: '2-digit', hour:'2-digit', minute: '2-digit', second: '2-digit'}) + "]");            
-
-
-
-const cambiaLuogo=()=> {
-    const selectLuogo = document.querySelector("#selectLuogo");
-    console.log("cambiaLuogo(): " + selectLuogo.value);
+const onPaeseChange=()=> {
+    const selPaese = document.querySelector("#selPaese");
+    paese = selPaese.value;
+    console.log("onPaeseChange(): " + paese);
     cercaMesse();
+}
+
+
+const caricaChieseDiocesi=()=> {
+    console.log("Carico chiese della Diocesi di " + diocesi);
+    switch (diocesi) {
+        case "Saluzzo": {
+            chieseDiocesi = chiese_001;
+            messe = messe_001;
+            break;
+        }
+        case "Cuneo": {
+            chieseDiocesi = chiese_002;  
+            messe = messe_002;
+            break;
+        }
+    }
+    console.log("Caricato n." + chieseDiocesi.length + " chiese");
+    
+        // Controllo quale Paesi (distinct) sono presenti
+    let paesi = Array();
+    for (let idChiesa=0; idChiesa<chieseDiocesi.length; idChiesa++){
+        let chiesa = chieseDiocesi[idChiesa];
+        if (paesi.indexOf(chiesa.paese) == -1)
+            paesi.push(chiesa.paese);
+    }
+        // Aggiungo i Paesi nella selPaese                  // TODO: rimuovere le option. Ora non le rimuove tutte
+    let selPaese = document.getElementById("selPaese");
+    selPaese.innerHTML = "";
+    let option = document.createElement("option");
+    option.text = "Scegli...";
+    selPaese.add(option);
+
+    console.log("Elenco paesi:");
+    for (let idPaese=0; idPaese<paesi.length; idPaese++) {
+        console.log("\t- " + paesi[idPaese]);
+        let optPaese = document.createElement("option");
+        optPaese.text = paesi[idPaese];
+        selPaese.add(optPaese);
+    }
+
+
+
+
+
+    // TODO: fare fetch?
 }
