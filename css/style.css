@@ -124,7 +124,8 @@ body {
 }
 
 .select_messe {
-    color: #f4c007;
+    color: #f4c007;    
+    height: calc(3.25rem + 2px);
 }
 
 .a_on_dark {

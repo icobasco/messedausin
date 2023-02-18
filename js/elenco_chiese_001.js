@@ -28,5 +28,6 @@ let chiese_001 = [
     {"diocesi_id": "001", "chiesa_id": "0027", "paese": "Verzuolo", "frazione": "Falicetto", "intitolazione": "S. Bartolomeo", "posizione": { "indirizzo":"Via Saluzzo, 2", "CAP": "12039", "lat": 44.5988417, "lon": 7.5128023}},
     {"diocesi_id": "001", "chiesa_id": "0028", "paese": "Verzuolo", "frazione": "Villanovetta", "intitolazione": "S. Andrea", "posizione": { "indirizzo":"Via Griselda, 4C", "CAP": "12039", "lat": 44.588183, "lon": 7.4800929}},
     {"diocesi_id": "001", "chiesa_id": "0029", "paese": "Verzuolo", "frazione": "Capoluogo", "intitolazione": "S. Maria della Scala", "posizione": { "indirizzo":"C.so Umberto, 200", "CAP": "", "lat": 44.5951501, "lon": 7.4826712}},
-    {"diocesi_id": "001", "chiesa_id": "0030", "paese": "Verzuolo", "frazione": "Capoluogo", "intitolazione": "SS. Filippo e Giacomo", "posizione": { "indirizzo":"Via del Castello, 8", "CAP": "12039", "lat": 44.6011996, "lon": 7.4812234}}
+    {"diocesi_id": "001", "chiesa_id": "0030", "paese": "Verzuolo", "frazione": "Capoluogo", "intitolazione": "SS. Filippo e Giacomo", "posizione": { "indirizzo":"Via del Castello, 8", "CAP": "12039", "lat": 44.6011996, "lon": 7.4812234}},
+    {"diocesi_id": "001", "chiesa_id": "0031", "paese": "Villanova Solaro", "frazione": "Capoluogo", "intitolazione": "S. Martino", "posizione": { "indirizzo":"", "CAP": "", "lat": 0, "lon": 0}}
 ]
