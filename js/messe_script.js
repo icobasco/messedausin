@@ -130,13 +130,14 @@ const cercaMesse =()=> {
             const messaB = b.data.substring(6, 10) + b.data.substring(3, 5) + b.data.substring(0, 2)+ b.ora.replace(":", "");
             return messaA - messaB;
         });
+        // console.log("Controllo n." + messe.length + " Messe");
         for (let idMessa=0; idMessa<messe.length; idMessa++){
             let messa = messe[idMessa];
             let divMessa = "NO_MESSA";
             const dataMessa = messa.data.substring(6, 10) + "-" + messa.data.substring(3, 5) + "-" + messa.data.substring(0, 2);
             const giornoMessa = new Date(dataMessa).toLocaleString('default', {weekday: 'long'});
             const messaTimestamp = new Date(dataMessa);        
-            // console.log("Luogo: " + selectLuogo.value);
+            // console.log("Luogo: " + selPaese.value);
             let posIndirizzo = "";
             let posLat = "";
             let posLon = "";
@@ -146,18 +147,21 @@ const cercaMesse =()=> {
                     let chiesaCOD = messa.diocesi_id + messa.chiesa_id;
                     console.log("Trovato una Messa OK: " + messa.paese + " - " + messa.chiesa_nome + " " + giornoMessa + " " + messa.data + " [" + chiesaCOD + "]");
                     let chiesaDati = chieseDati[chiesaCOD];
-                    console.log("\tchiesaDati: " + chiesaDati);
+                    // console.log("\tchiesaDati: " + chiesaDati);
                     frazione = chiesaDati.frazione;
                     posIndirizzo = chiesaDati.posizione.indirizzo;
                     posLat = chiesaDati.posizione.lat;
                     posLon = chiesaDati.posizione.lon;
-                    console.log("\t" + chiesaDati.intitolazione + " IN " + chiesaDati.paese + " (" + posIndirizzo + ")\t" + posLat + "," + posLon);
+                    // console.log("\t" + chiesaDati.intitolazione + " IN " + chiesaDati.paese + " (" + posIndirizzo + ")\t" + posLat + "," + posLon);
                     divMessa = document.createElement("div");
                     messeOKCounter++;   
                 }
+                // else {
+                //     console.log("\tTrovato una Messa del luogo ma fuori data");
+                // }
             }
             // else {
-            //     console.log("Filtro: \"" + selectLuogo.value + "\" - Chiesa: \"" + messa.paese + "\"");
+            //     console.log("Filtro: \"" + selPaese.value + "\" - Chiesa: \"" + messa.paese + "\"");
             // }
             if (divMessa != "NO_MESSA") {
                 if (lastDataMessa != dataMessa) {
@@ -231,7 +235,7 @@ const caricaChieseDiocesi=()=> {
     let paesi = Array();
     for (let idChiesa=0; idChiesa<chieseDiocesi.length; idChiesa++){
         let chiesa = chieseDiocesi[idChiesa];
-        if (paesi.indexOf(chiesa.paese) == -1)
+        if ( (paesi.indexOf(chiesa.paese) == -1) && (chiesa.coperta=="SI") )
             paesi.push(chiesa.paese);
     }
         // Aggiungo i Paesi nella selPaese                  // TODO: rimuovere le option. Ora non le rimuove tutte
