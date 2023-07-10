@@ -4,10 +4,10 @@
 		"paese": "ROSSANA",
 		"fraz": "Mad. delle Grazie",
 		"nome": "Mad. delle Grazie",
-		"EST_INV": "E",
-		"GIORNO": "SAB",
-		"ORARIO": "15:30",
-		"NOTE": "Luglio e Agosto"
+		"est_inv": "E",
+		"giorno": "SAB",
+		"orario": "15:30",
+		"note": "Luglio e Agosto"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -15,10 +15,10 @@
 		"paese": "ROSSANA",
 		"fraz": "Capoluogo",
 		"nome": "Maria Vergine Assunta",
-		"EST_INV": "EI",
-		"GIORNO": "SAB",
-		"ORARIO": "18:00",
-		"NOTE": "Sempre"
+		"est_inv": "EI",
+		"giorno": "SAB",
+		"orario": "18:00",
+		"note": "Sempre"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -26,10 +26,10 @@
 		"paese": "ROSSANA",
 		"fraz": "Mad. delle Grazie",
 		"nome": "Mad. delle Grazie",
-		"EST_INV": "I",
-		"GIORNO": "SAB",
-		"ORARIO": "15:00",
-		"NOTE": "Sempre, tranne luglio e agosto"
+		"est_inv": "I",
+		"giorno": "SAB",
+		"orario": "15:00",
+		"note": "Sempre, tranne luglio e agosto"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -37,10 +37,10 @@
 		"paese": "PIASCO",
 		"fraz": "Capoluogo",
 		"nome": "S. Giovanni",
-		"EST_INV": "E",
-		"GIORNO": "SAB",
-		"ORARIO": "19:00",
-		"NOTE": "1a e 3a"
+		"est_inv": "E",
+		"giorno": "SAB",
+		"orario": "19:00",
+		"note": "1a e 3a"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -48,10 +48,10 @@
 		"paese": "PIASCO",
 		"fraz": "S. Antonio",
 		"nome": "S. Antonio",
-		"EST_INV": "E",
-		"GIORNO": "SAB",
-		"ORARIO": "19:00",
-		"NOTE": "2a e 4a"
+		"est_inv": "E",
+		"giorno": "SAB",
+		"orario": "19:00",
+		"note": "2a e 4a"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -59,10 +59,10 @@
 		"paese": "PIASCO",
 		"fraz": "Capoluogo",
 		"nome": "S. Giovanni",
-		"EST_INV": "I",
-		"GIORNO": "SAB",
-		"ORARIO": "17:00",
-		"NOTE": "1a e 3a"
+		"est_inv": "I",
+		"giorno": "SAB",
+		"orario": "17:00",
+		"note": "1a e 3a"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -70,10 +70,10 @@
 		"paese": "PIASCO",
 		"fraz": "S. Antonio",
 		"nome": "S. Antonio",
-		"EST_INV": "I",
-		"GIORNO": "SAB",
-		"ORARIO": "17:00",
-		"NOTE": "2a e 4a"
+		"est_inv": "I",
+		"giorno": "SAB",
+		"orario": "17:00",
+		"note": "2a e 4a"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -81,10 +81,10 @@
 		"paese": "PIASCO",
 		"fraz": "Capoluogo",
 		"nome": "Mad. del Carmine",
-		"EST_INV": "EI",
-		"GIORNO": "DOM",
-		"ORARIO": "08:30",
-		"NOTE": "Sempre"
+		"est_inv": "EI",
+		"giorno": "DOM",
+		"orario": "08:30",
+		"note": "Sempre"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -92,10 +92,10 @@
 		"paese": "PIASCO",
 		"fraz": "Capoluogo",
 		"nome": "S. Giovanni",
-		"EST_INV": "EI",
-		"GIORNO": "DOM",
-		"ORARIO": "10:00",
-		"NOTE": "Sempre"
+		"est_inv": "EI",
+		"giorno": "DOM",
+		"orario": "10:00",
+		"note": "Sempre"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -103,10 +103,10 @@
 		"paese": "ROSSANA",
 		"fraz": "Capoluogo",
 		"nome": "Maria Vergine Assunta",
-		"EST_INV": "EI",
-		"GIORNO": "DOM",
-		"ORARIO": "11:00",
-		"NOTE": "2a e 4a"
+		"est_inv": "EI",
+		"giorno": "DOM",
+		"orario": "11:00",
+		"note": "2a e 4a"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -114,10 +114,10 @@
 		"paese": "PIASCO",
 		"fraz": "S. Antonio",
 		"nome": "S. Antonio",
-		"EST_INV": "EI",
-		"GIORNO": "DOM",
-		"ORARIO": "11:00",
-		"NOTE": "1a e 3a"
+		"est_inv": "EI",
+		"giorno": "DOM",
+		"orario": "11:00",
+		"note": "1a e 3a"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -125,10 +125,10 @@
 		"paese": "ROSSANA",
 		"fraz": "Lemma",
 		"nome": "Lemma",
-		"EST_INV": "I",
-		"GIORNO": "DOM",
-		"ORARIO": "17:00",
-		"NOTE": "Sempre"
+		"est_inv": "I",
+		"giorno": "DOM",
+		"orario": "17:00",
+		"note": "Sempre"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -136,10 +136,10 @@
 		"paese": "PIASCO",
 		"fraz": "S. Antonio",
 		"nome": "S. Antonio",
-		"EST_INV": "E",
-		"GIORNO": "DOM",
-		"ORARIO": "18:30",
-		"NOTE": "Sempre, da Festa S.Antonio"
+		"est_inv": "E",
+		"giorno": "DOM",
+		"orario": "18:30",
+		"note": "Sempre, da Festa S.Antonio"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -147,10 +147,10 @@
 		"paese": "PIASCO",
 		"fraz": "S. Antonio",
 		"nome": "S. Antonio",
-		"EST_INV": "I",
-		"GIORNO": "DOM",
-		"ORARIO": "18:00",
-		"NOTE": "Sempre, fino a Festa S.Antonio"
+		"est_inv": "I",
+		"giorno": "DOM",
+		"orario": "18:00",
+		"note": "Sempre, fino a Festa S.Antonio"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -158,10 +158,10 @@
 		"paese": "ROSSANA",
 		"fraz": "Lemma",
 		"nome": "Lemma",
-		"EST_INV": "E",
-		"GIORNO": "DOM",
-		"ORARIO": "09:30",
-		"NOTE": "1a e 3a"
+		"est_inv": "E",
+		"giorno": "DOM",
+		"orario": "09:30",
+		"note": "1a e 3a"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -169,10 +169,10 @@
 		"paese": "COSTIGLIOLE SALUZZO",
 		"fraz": "Capoluogo",
 		"nome": "S. Maria Maddalena",
-		"EST_INV": "I",
-		"GIORNO": "SAB",
-		"ORARIO": "18:00",
-		"NOTE": "No Luglio e Agosto"
+		"est_inv": "I",
+		"giorno": "SAB",
+		"orario": "18:00",
+		"note": "No Luglio e Agosto"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -180,10 +180,10 @@
 		"paese": "COSTIGLIOLE SALUZZO",
 		"fraz": "Ceretto",
 		"nome": "Ceretto",
-		"EST_INV": "E",
-		"GIORNO": "SAB",
-		"ORARIO": "18:00",
-		"NOTE": "Solo Luglio e Agosto"
+		"est_inv": "E",
+		"giorno": "SAB",
+		"orario": "18:00",
+		"note": "Solo Luglio e Agosto"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -191,10 +191,10 @@
 		"paese": "VERZUOLO",
 		"fraz": "Capoluogo",
 		"nome": "S. Filippo",
-		"EST_INV": "EI",
-		"GIORNO": "SAB",
-		"ORARIO": "18:00",
-		"NOTE": ""
+		"est_inv": "EI",
+		"giorno": "SAB",
+		"orario": "18:00",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -202,10 +202,10 @@
 		"paese": "VERZUOLO",
 		"fraz": "Villanovetta",
 		"nome": "S. Andrea",
-		"EST_INV": "EI",
-		"GIORNO": "SAB",
-		"ORARIO": "18:00",
-		"NOTE": ""
+		"est_inv": "EI",
+		"giorno": "SAB",
+		"orario": "18:00",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -213,10 +213,10 @@
 		"paese": "VERZUOLO",
 		"fraz": "Falicetto",
 		"nome": "S. Bartolomeo",
-		"EST_INV": "EI",
-		"GIORNO": "SAB",
-		"ORARIO": "18:30",
-		"NOTE": ""
+		"est_inv": "EI",
+		"giorno": "SAB",
+		"orario": "18:30",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -224,10 +224,10 @@
 		"paese": "VERZUOLO",
 		"fraz": "Capoluogo",
 		"nome": "S. Maria",
-		"EST_INV": "EI",
-		"GIORNO": "DOM",
-		"ORARIO": "09:00",
-		"NOTE": ""
+		"est_inv": "EI",
+		"giorno": "DOM",
+		"orario": "09:00",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -235,10 +235,10 @@
 		"paese": "VERZUOLO",
 		"fraz": "Capoluogo",
 		"nome": "S. Filippo",
-		"EST_INV": "I",
-		"GIORNO": "DOM",
-		"ORARIO": "10:00",
-		"NOTE": "No Luglio e Agosto"
+		"est_inv": "I",
+		"giorno": "DOM",
+		"orario": "10:00",
+		"note": "No Luglio e Agosto"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -246,10 +246,10 @@
 		"paese": "VERZUOLO",
 		"fraz": "Falicetto",
 		"nome": "S. Bartolomeo",
-		"EST_INV": "EI",
-		"GIORNO": "DOM",
-		"ORARIO": "10:00",
-		"NOTE": ""
+		"est_inv": "EI",
+		"giorno": "DOM",
+		"orario": "10:00",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -257,10 +257,10 @@
 		"paese": "COSTIGLIOLE SALUZZO",
 		"fraz": "Capoluogo",
 		"nome": "S. Maria Maddalena",
-		"EST_INV": "EI",
-		"GIORNO": "DOM",
-		"ORARIO": "11:00",
-		"NOTE": ""
+		"est_inv": "EI",
+		"giorno": "DOM",
+		"orario": "11:00",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -268,10 +268,10 @@
 		"paese": "VERZUOLO",
 		"fraz": "Villanovetta",
 		"nome": "S. Andrea",
-		"EST_INV": "EI",
-		"GIORNO": "DOM",
-		"ORARIO": "11:15",
-		"NOTE": ""
+		"est_inv": "EI",
+		"giorno": "DOM",
+		"orario": "11:15",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -279,10 +279,10 @@
 		"paese": "COSTIGLIOLE SALUZZO",
 		"fraz": "Capoluogo",
 		"nome": "Confraternita",
-		"EST_INV": "EI",
-		"GIORNO": "DOM",
-		"ORARIO": "18:00",
-		"NOTE": ""
+		"est_inv": "EI",
+		"giorno": "DOM",
+		"orario": "18:00",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -290,10 +290,10 @@
 		"paese": "VERZUOLO",
 		"fraz": "Capoluogo",
 		"nome": "S. Filippo",
-		"EST_INV": "EI",
-		"GIORNO": "DOM",
-		"ORARIO": "20:30",
-		"NOTE": ""
+		"est_inv": "EI",
+		"giorno": "DOM",
+		"orario": "20:30",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -301,10 +301,10 @@
 		"paese": "BROSSASCO",
 		"fraz": "Capoluogo",
 		"nome": "S. Andrea",
-		"EST_INV": "EI",
-		"GIORNO": "SAB",
-		"ORARIO": "18:30",
-		"NOTE": ""
+		"est_inv": "EI",
+		"giorno": "SAB",
+		"orario": "18:30",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -312,10 +312,10 @@
 		"paese": "BROSSASCO",
 		"fraz": "Capoluogo",
 		"nome": "S. Andrea",
-		"EST_INV": "EI",
-		"GIORNO": "DOM",
-		"ORARIO": "10:30",
-		"NOTE": "In estate non si celebra se in concomitanza con Messa in Cappelle"
+		"est_inv": "EI",
+		"giorno": "DOM",
+		"orario": "10:30",
+		"note": "In estate non si celebra se in concomitanza con Messa in Cappelle"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -323,10 +323,10 @@
 		"paese": "MANTA",
 		"fraz": "Capoluogo",
 		"nome": "S. Maria degli Angeli",
-		"EST_INV": "EI",
-		"GIORNO": "SAB",
-		"ORARIO": "18:30",
-		"NOTE": "Da controllare"
+		"est_inv": "EI",
+		"giorno": "SAB",
+		"orario": "18:30",
+		"note": "Da controllare"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -334,10 +334,10 @@
 		"paese": "MANTA",
 		"fraz": "Capoluogo",
 		"nome": "S. Maria degli Angeli",
-		"EST_INV": "EI",
-		"GIORNO": "DOM",
-		"ORARIO": "10:30",
-		"NOTE": ""
+		"est_inv": "EI",
+		"giorno": "DOM",
+		"orario": "10:30",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -345,10 +345,10 @@
 		"paese": "VALMALA",
 		"fraz": "B.go Santuario",
 		"nome": "Santuario Valmala",
-		"EST_INV": "E",
-		"GIORNO": "DOM",
-		"ORARIO": "08:00",
-		"NOTE": "Luglio e Agosto"
+		"est_inv": "E",
+		"giorno": "DOM",
+		"orario": "08:00",
+		"note": "Luglio e Agosto"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -356,10 +356,10 @@
 		"paese": "VALMALA",
 		"fraz": "B.go Santuario",
 		"nome": "Santuario Valmala",
-		"EST_INV": "E",
-		"GIORNO": "DOM",
-		"ORARIO": "09:30",
-		"NOTE": "Luglio e Agosto"
+		"est_inv": "E",
+		"giorno": "DOM",
+		"orario": "09:30",
+		"note": "Luglio e Agosto"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -367,10 +367,10 @@
 		"paese": "VALMALA",
 		"fraz": "B.go Santuario",
 		"nome": "Santuario Valmala",
-		"EST_INV": "EI",
-		"GIORNO": "DOM",
-		"ORARIO": "11:00",
-		"NOTE": "Sempre"
+		"est_inv": "EI",
+		"giorno": "DOM",
+		"orario": "11:00",
+		"note": "Sempre"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -378,10 +378,10 @@
 		"paese": "VALMALA",
 		"fraz": "B.go Santuario",
 		"nome": "Santuario Valmala",
-		"EST_INV": "EI",
-		"GIORNO": "DOM",
-		"ORARIO": "16:00",
-		"NOTE": "Sempre"
+		"est_inv": "EI",
+		"giorno": "DOM",
+		"orario": "16:00",
+		"note": "Sempre"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -389,10 +389,10 @@
 		"paese": "SAMPEYRE",
 		"fraz": "Capoluogo",
 		"nome": "SS. Pietro e Paolo",
-		"EST_INV": "E",
-		"GIORNO": "SAB",
-		"ORARIO": "18:00",
-		"NOTE": ""
+		"est_inv": "E",
+		"giorno": "SAB",
+		"orario": "18:00",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -400,10 +400,10 @@
 		"paese": "SAMPEYRE",
 		"fraz": "Capoluogo",
 		"nome": "SS. Pietro e Paolo",
-		"EST_INV": "E",
-		"GIORNO": "DOM",
-		"ORARIO": "11:30",
-		"NOTE": ""
+		"est_inv": "E",
+		"giorno": "DOM",
+		"orario": "11:30",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -411,10 +411,10 @@
 		"paese": "SAMPEYRE",
 		"fraz": "Capoluogo",
 		"nome": "SS. Pietro e Paolo",
-		"EST_INV": "E",
-		"GIORNO": "DOM",
-		"ORARIO": "18:00",
-		"NOTE": ""
+		"est_inv": "E",
+		"giorno": "DOM",
+		"orario": "18:00",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -422,10 +422,10 @@
 		"paese": "SAMPEYRE",
 		"fraz": "Becetto",
 		"nome": "Natività di Maria V. e S. Eusebio",
-		"EST_INV": "E",
-		"GIORNO": "DOM",
-		"ORARIO": "11:30",
-		"NOTE": ""
+		"est_inv": "E",
+		"giorno": "DOM",
+		"orario": "11:30",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -433,10 +433,10 @@
 		"paese": "SAMPEYRE",
 		"fraz": "Rore",
 		"nome": "S. Nicolao",
-		"EST_INV": "E",
-		"GIORNO": "DOM",
-		"ORARIO": "10.15",
-		"NOTE": ""
+		"est_inv": "E",
+		"giorno": "DOM",
+		"orario": "10.15",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -444,10 +444,10 @@
 		"paese": "SAMPEYRE",
 		"fraz": "Villar",
 		"nome": "S. Maria Assunta",
-		"EST_INV": "E",
-		"GIORNO": "SAB",
-		"ORARIO": "15.30",
-		"NOTE": "1° sabato del mese"
+		"est_inv": "E",
+		"giorno": "SAB",
+		"orario": "15.30",
+		"note": "1° sabato del mese"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -455,10 +455,10 @@
 		"paese": "SAMPEYRE",
 		"fraz": "Dragoniere",
 		"nome": "Sant’Antonio",
-		"EST_INV": "E",
-		"GIORNO": "SAB",
-		"ORARIO": "15:30",
-		"NOTE": "2° sabato del mese"
+		"est_inv": "E",
+		"giorno": "SAB",
+		"orario": "15:30",
+		"note": "2° sabato del mese"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -466,10 +466,10 @@
 		"paese": "PONTECHIANALE",
 		"fraz": "Chiesa",
 		"nome": "S. Pietro in Vincoli",
-		"EST_INV": "E",
-		"GIORNO": "SAB",
-		"ORARIO": "18:00",
-		"NOTE": ""
+		"est_inv": "E",
+		"giorno": "SAB",
+		"orario": "18:00",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -477,10 +477,10 @@
 		"paese": "PONTECHIANALE",
 		"fraz": "Chiesa",
 		"nome": "S. Pietro in Vincoli",
-		"EST_INV": "E",
-		"GIORNO": "DOM",
-		"ORARIO": "18:00",
-		"NOTE": ""
+		"est_inv": "E",
+		"giorno": "DOM",
+		"orario": "18:00",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -488,10 +488,10 @@
 		"paese": "PONTECHIANALE",
 		"fraz": "Chianale",
 		"nome": "S. Lorenzo",
-		"EST_INV": "E",
-		"GIORNO": "DOM",
-		"ORARIO": "16:30",
-		"NOTE": ""
+		"est_inv": "E",
+		"giorno": "DOM",
+		"orario": "16:30",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -499,10 +499,10 @@
 		"paese": "BELLINO",
 		"fraz": "Chiesa",
 		"nome": "S. Giacomo",
-		"EST_INV": "E",
-		"GIORNO": "DOM",
-		"ORARIO": "09:00",
-		"NOTE": "Alternata con S. Spirito in Bellino fr. Celle"
+		"est_inv": "E",
+		"giorno": "DOM",
+		"orario": "09:00",
+		"note": "Alternata con S. Spirito in Bellino fr. Celle"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -510,10 +510,10 @@
 		"paese": "BELLINO",
 		"fraz": "Celle",
 		"nome": "S. Spirito",
-		"EST_INV": "E",
-		"GIORNO": "DOM",
-		"ORARIO": "09:00",
-		"NOTE": "Alternata con S. Giacomo in Bellino fr. Chiesa"
+		"est_inv": "E",
+		"giorno": "DOM",
+		"orario": "09:00",
+		"note": "Alternata con S. Giacomo in Bellino fr. Chiesa"
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -521,10 +521,10 @@
 		"paese": "FRASSINO",
 		"fraz": "Capoluogo",
 		"nome": "SS. Stefano e Maurizio",
-		"EST_INV": "E",
-		"GIORNO": "DOM",
-		"ORARIO": "09:00",
-		"NOTE": ""
+		"est_inv": "E",
+		"giorno": "DOM",
+		"orario": "09:00",
+		"note": ""
 	},
 	{
 		"diocesi": "SALUZZO",
@@ -532,9 +532,9 @@
 		"paese": "CASTELDELFINO",
 		"fraz": "Capoluogo",
 		"nome": "S. Margherita",
-		"EST_INV": "E",
-		"GIORNO": "DOM",
-		"ORARIO": "10:15",
-		"NOTE": ""
+		"est_inv": "E",
+		"giorno": "DOM",
+		"orario": "10:15",
+		"note": ""
 	}
 ]
